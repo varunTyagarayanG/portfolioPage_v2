@@ -1,0 +1,58 @@
+.researchPapers {
+  margin-top: 4rem;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-family: var(--serif-font);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.sectionLink {
+  color: var(--link-blue);
+  text-decoration: none;
+  font-family: var(--sans-font);
+  font-size: 0.95rem;
+}
+
+.sectionDescription {
+  color: var(--text-gray);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.paperLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Reduced from 1rem to 0.5rem */
+}
+
+
+.paperItem {
+  color: var(--link-blue);
+  text-decoration: none;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.paperItem::before {
+  content: "●";
+  color: black;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.paperItem:hover {
+  text-decoration: underline;
+}
+

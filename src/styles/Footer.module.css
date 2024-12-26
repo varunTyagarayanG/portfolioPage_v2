@@ -1,0 +1,69 @@
+.footer {
+  background-color: #f8f8f8;
+  padding: 4rem 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.newsletter {
+  text-align: left;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.newsletterTitle {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.highlight {
+  color: #e91e63;
+}
+
+.newsletterDesc {
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.newsletterButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.buttonLinkedin {
+  background-color: #e91e63;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.copyright {
+  color: #999;
+  font-size: 0.9rem;
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.timestamp {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .newsletterButtons {
+    flex-direction: column;
+  }
+}
+

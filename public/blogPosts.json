@@ -1,0 +1,77 @@
+[
+    {
+        "_id": "1",
+        "title": "Understanding Database Sharding",
+        "content": "Full content of the blog post goes here...",
+        "summary": "An in-depth look at how database sharding can improve performance and scalability in large-scale applications.",
+        "author": "Varun Tyagarayan",
+        "author_id": "auth0|123456",
+        "tags": [
+            "Database",
+            "Scalability",
+            "Performance"
+        ],
+        "category": "Database",
+        "image": "/images/database-sharding.jpg",
+        "publish_date": "2025-01-15T00:00:00.000Z",
+        "last_updated": "2025-01-15T00:00:00.000Z",
+        "status": "published",
+        "views": 1500,
+        "comments": [],
+        "likes": 75,
+        "dislikes": 2,
+        "seo_title": "Database Sharding: Improving Performance and Scalability",
+        "seo_description": "Learn how database sharding can enhance your application's performance and scalability in this comprehensive guide.",
+        "slug": "understanding-database-sharding"
+    },
+    {
+        "_id": "2",
+        "title": "The Future of Cloud Computing",
+        "content": "Full content of the blog post goes here...",
+        "summary": "Exploring emerging trends and technologies that will shape the future of cloud computing.",
+        "author": "Varun Tyagarayan",
+        "author_id": "auth0|123456",
+        "tags": [
+            "Cloud Computing",
+            "Technology Trends",
+            "Future Tech"
+        ],
+        "category": "Cloud",
+        "image": "/images/cloud-computing-future.jpg",
+        "publish_date": "2025-01-08T00:00:00.000Z",
+        "last_updated": "2025-01-08T00:00:00.000Z",
+        "status": "published",
+        "views": 2000,
+        "comments": [],
+        "likes": 120,
+        "dislikes": 5,
+        "seo_title": "The Future of Cloud Computing: Emerging Trends and Technologies",
+        "seo_description": "Discover the latest trends and technologies shaping the future of cloud computing in this insightful article.",
+        "slug": "future-of-cloud-computing"
+    },
+    {
+        "_id": "3",
+        "title": "Optimizing React Performance",
+        "content": "Full content of the blog post goes here...",
+        "summary": "Best practices and techniques for improving the performance of your React applications.",
+        "author": "Varun Tyagarayan",
+        "author_id": "auth0|123456",
+        "tags": [
+            "React",
+            "Performance",
+            "Web Development"
+        ],
+        "category": "Frontend",
+        "image": "/images/react-performance.jpg",
+        "publish_date": "2025-01-01T00:00:00.000Z",
+        "last_updated": "2025-01-01T00:00:00.000Z",
+        "status": "published",
+        "views": 3000,
+        "comments": [],
+        "likes": 180,
+        "dislikes": 3,
+        "seo_title": "Optimizing React Performance: Best Practices and Techniques",
+        "seo_description": "Learn how to boost your React application's performance with these expert tips and best practices.",
+        "slug": "optimizing-react-performance"
+    }
+]

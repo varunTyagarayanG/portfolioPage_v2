@@ -1,0 +1,77 @@
+.projectsSection {
+  display: flex;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.recentProjects, .currentProjects {
+  flex: 1;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-family: var(--serif-font);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.sectionLink {
+  color: var(--link-blue);
+  text-decoration: none;
+  font-family: var(--sans-font);
+  font-size: 1rem;
+}
+
+.sectionDescription {
+  color: var(--text-gray);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.postList, .projectList {
+  list-style: none;
+  padding: 0;
+}
+
+.postItem, .projectItem {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.postDate {
+  font-family: monospace;
+  font-size: 0.9em;
+  color: var(--text-gray);
+}
+
+.postSeparator {
+  margin: 0 0.5rem;
+}
+
+.postLink {
+  color: var(--link-blue);
+  text-decoration: none;
+}
+
+.postLink:hover {
+  text-decoration: underline;
+}
+
+.conclusion {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .projectsSection {
+    flex-direction: column;
+  }
+}
+
