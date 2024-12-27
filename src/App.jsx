@@ -6,6 +6,7 @@ import ProjectsSection from './components/ProjectsSection';
 import ResearchPapers from './components/ResearchPapers';
 import Footer from './components/Footer';
 import Blog from './components/Blog';
+import BlogPost from './components/BlogPost';
 import './styles/App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             </main>
           } />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
         </Routes>
         <Footer />
       </div>
