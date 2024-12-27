@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import styles from '../styles/BlogPost.module.css';
 import { API_ENDPOINTS } from '../config/api';
+import Loading from './Loading';
 
 const BlogPost = () => {
   const [post, setPost] = useState(null);
@@ -14,10 +15,10 @@ const BlogPost = () => {
   useEffect(() => {
     const fetchBlogPost = async () => {
       try {
-        console.log('Fetching blog post with ID:', id); // Debug log
-        console.log('Using endpoint:', API_ENDPOINTS.getBlogById(id)); // Debug log
+        console.log('Fetching blog post with ID:', id);
+        console.log('Using endpoint:', API_ENDPOINTS.getBlogById(id));
         const response = await axios.get(API_ENDPOINTS.getBlogById(id));
-        console.log('Blog post response:', response.data); // Debug log
+        console.log('Blog post response:', response.data);
         setPost(response.data);
         setIsLoading(false);
       } catch (e) {
@@ -60,7 +61,7 @@ const BlogPost = () => {
     }
   };
 
-  if (isLoading) return <div className={styles.loading}>Loading...</div>;
+  if (isLoading) return <Loading />;
 
   if (error) {
     return (

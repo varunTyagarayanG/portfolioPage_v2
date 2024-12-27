@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import styles from '../styles/Blog.module.css';
 import { API_ENDPOINTS } from '../config/api';
+import Loading from './Loading';
 
 const Blog = () => {
     const [blogPosts, setBlogPosts] = useState([]);
@@ -13,7 +14,7 @@ const Blog = () => {
         const fetchBlogPosts = async () => {
             try {
                 const response = await axios.get(API_ENDPOINTS.getAllBlogs);
-                console.log('Fetched blog posts:', response.data); // Debug log
+                console.log('Fetched blog posts:', response.data);
                 setBlogPosts(response.data);
                 setIsLoading(false);
             } catch (e) {
@@ -26,7 +27,7 @@ const Blog = () => {
         fetchBlogPosts();
     }, []);
 
-    if (isLoading) return <div className={styles.loading}>Loading...</div>;
+    if (isLoading) return <Loading />;
     if (error) return <div className={styles.error}>Error: {error}</div>;
 
     return (
