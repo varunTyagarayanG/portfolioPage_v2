@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:5001/v2/api/blogs';
+const API_BASE_URL = 'https://portfolio-site-v2-backend.onrender.com/v2/api/blogs';
 
 export const API_ENDPOINTS = {
     getAllBlogs: `${API_BASE_URL}/blogs`,
