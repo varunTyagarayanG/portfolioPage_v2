@@ -1,45 +1,56 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import styles from '../styles/Blog.module.css';
-import { API_ENDPOINTS } from '../config/api';
-import Loading from './Loading';
 
 const Blog = () => {
-    const [blogPosts, setBlogPosts] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState(null);
-
-    useEffect(() => {
-        const fetchBlogPosts = async () => {
-            try {
-                const response = await axios.get(API_ENDPOINTS.getAllBlogs);
-                console.log('Fetched blog posts:', response.data);
-                setBlogPosts(response.data);
-                setIsLoading(false);
-            } catch (e) {
-                console.error('Error fetching blogs:', e);
-                setError(e.response?.data?.message || e.message);
-                setIsLoading(false);
-            }
-        };
-
-        fetchBlogPosts();
-    }, []);
-
-    if (isLoading) return <Loading />;
-    if (error) return <div className={styles.error}>Error: {error}</div>;
+    const blogPosts = [
+        {
+            _id: '1',
+            title: 'Understanding the CAP Theorem',
+            author: 'Varun Tyagarayan G',
+            publish_date: '2023-12-01',
+            summary: 'An in-depth look at the CAP theorem and its implications for distributed systems.'
+        },
+        {
+            _id: '2',
+            title: 'Exploring Distributed Key-Value Stores',
+            author: 'Varun Tyagarayan G',
+            publish_date: '2023-12-15',
+            summary: 'A comprehensive analysis of various distributed key-value store architectures.'
+        },
+        {
+            _id: '3',
+            title: 'The Evolution of NoSQL Databases',
+            author: 'Varun Tyagarayan G',
+            publish_date: '2024-01-05',
+            summary: 'Tracing the history and development of NoSQL databases and their impact on modern data storage.'
+        },
+        {
+            _id: '4',
+            title: 'Scaling Databases: Techniques and Challenges',
+            author: 'Varun Tyagarayan G',
+            publish_date: '2024-01-20',
+            summary: 'Exploring various strategies for scaling databases and the challenges they present.'
+        },
+        {
+            _id: '5',
+            title: 'In-Memory Databases: Use Cases and Limitations',
+            author: 'Varun Tyagarayan G',
+            publish_date: '2024-02-05',
+            summary: 'Analyzing the benefits and drawbacks of in-memory databases in modern applications.'
+        }
+    ];
 
     return (
-        <section className={`${styles.blog} container`}>
-            <h1 className={styles.title}>Tyaggs Dhwaja - A Blog</h1>
-            <p className={styles.description}>Weekly essays on research papers and tech insights.</p>
-            <div className={styles.posts}>
-                {blogPosts.length > 0 ? (
-                    blogPosts.map((post) => (
+        <div className={styles.blog}>
+            <div className="container">
+                <h1 className={styles.title}>Tyaggs Dhwaja - A Blog</h1>
+                <p className={styles.description}>Weekly essays on research papers and tech insights.</p>
+                <div className={styles.posts}>
+                    {blogPosts.map((post) => (
                         <article key={post._id} className={styles.post}>
                             <h2 className={styles.postTitle}>
-                                <Link to={`/blog/${post._id}`}>{post.title}</Link>
+                                <Link to={`/blog/${post._id}`} className={styles.postLink}>{post.title}</Link>
                             </h2>
                             <p className={styles.postMeta}>
                                 <span className={styles.postAuthor}>By {post.author}</span>
@@ -49,12 +60,10 @@ const Blog = () => {
                             </p>
                             <p className={styles.postSummary}>{post.summary}</p>
                         </article>
-                    ))
-                ) : (
-                    <p className={styles.noPosts}>No blog posts found.</p>
-                )}
+                    ))}
+                </div>
             </div>
-        </section>
+        </div>
     );
 };
 

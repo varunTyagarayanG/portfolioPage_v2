@@ -47,3 +47,5 @@ This project evolves a personal portfolio with a blogging feature into a scalabl
 
 GitHub: [github.com/varunTyagarayanG](https://github.com/varunTyagarayanG)  
 Portfolio: [varuntyagarayanme.netlify.app](https://varuntyagarayanme.netlify.app)
+
+https://cheery-dusk-942c39.netlify.app/

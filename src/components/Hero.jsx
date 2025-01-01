@@ -56,7 +56,7 @@ const Hero = () => {
         </div>
       </div>
       <div className={styles.imageContainer}>
-        <img src="public\removedBG.png" alt="Profile photo" className={styles.profileImage} />
+        <img src="/removedBG.png" alt="Profile photo" className={styles.profileImage} />
       </div>
     </section>
   );
