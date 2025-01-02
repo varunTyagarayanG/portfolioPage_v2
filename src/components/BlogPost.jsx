@@ -7,8 +7,12 @@ const blogContents = {
     title: 'Understanding the CAP Theorem',
     author: 'Varun Tyagarayan G',
     publish_date: '2023-12-01',
+    image: '/images/cap-theorem.jpg',
     content: `
             <h2>Introduction to CAP Theorem</h2>
+            <div class="blog-image">
+                <img src="/images/cap-theorem.jpg" alt="CAP Theorem Diagram" />
+            </div>
             <p>The CAP theorem, also known as Brewer's theorem, is a fundamental principle in distributed systems that states it is impossible for a distributed data store to simultaneously provide more than two out of the following three guarantees:</p>
             <ul>
                 <li><strong>Consistency:</strong> Every read receives the most recent write or an error</li>
@@ -22,8 +26,12 @@ const blogContents = {
     title: 'Exploring Distributed Key-Value Stores',
     author: 'Varun Tyagarayan G',
     publish_date: '2023-12-15',
+    image: '/images/key-value-store.jpg',
     content: `
             <h2>What are Distributed Key-Value Stores?</h2>
+            <div class="blog-image">
+                <img src="/images/key-value-store.jpg" alt="Distributed Key-Value Store Architecture" />
+            </div>
             <p>Distributed key-value stores are a type of non-relational database that uses a simple key-value method to store data. The data is distributed across multiple servers to achieve scalability and high availability.</p>
             <h3>Popular Distributed Key-Value Stores:</h3>
             <ul>
@@ -103,6 +111,11 @@ const BlogPost = () => {
       <div className="container">
         <Link to="/blog" className={styles.backLink}>← Back to all posts</Link>
         <h1 className={styles.postTitle}>{post.title}</h1>
+        {post.image && (
+          <div className="blog-image">
+            <img src={post.image} alt={post.title} />
+          </div>
+        )}
         <p className={styles.postMeta}>
           <span className={styles.postAuthor}>By {post.author}</span>
           <span className={styles.postDate}>
@@ -116,4 +129,3 @@ const BlogPost = () => {
 };
 
 export default BlogPost;
-

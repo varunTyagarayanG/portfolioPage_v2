@@ -1,16 +1,15 @@
 .header {
-  border-bottom: 1px solid #600; /* Darker border color */
-  padding: 1rem 2rem; /* Adds left and right padding */
+  border-bottom: 1px solid #600;
+  padding: 1rem 2rem;
   margin: 0 8rem 2rem 8rem;
   margin-bottom: 2rem;
-  
 }
-
 
 .navContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .logo {
@@ -24,52 +23,96 @@
 
 .navFonts a {
   text-decoration: none;
-  color: #333; /* Default color */
-  font-size: 0.95rem;
-  margin-left: 2rem;
-  position: relative; /* Needed for pseudo-elements */
-  font-weight: normal; /* Default font weight */
-  transition: color 0.3s ease, font-weight 0.3s ease; /* Smooth color and weight transition */
-  font-weight: bold;
-}
-
-.navFonts a:hover {
-  color: #222; /* Darker color on hover */
-  /* Bold on hover */
-}
-
-
-.navFonts a,
-.navFonts Link {
-  text-decoration: none;
   color: #333;
   font-size: 0.95rem;
   margin-left: 2rem;
+  position: relative;
+  font-weight: bold;
+  transition: color 0.3s ease, font-weight 0.3s ease;
 }
 
-
+.navFonts a:hover {
+  color: #222;
+}
 
 .navFonts a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -2px; /* Position the animation slightly below the text */
+  bottom: -2px;
   width: 0;
   height: 2px;
-  background-color: #222; /* Same as hover color */
-  transition: width 0.3s ease; /* Smooth animation for width */
+  background-color: #222;
+  transition: width 0.3s ease;
 }
 
 .navFonts a:hover::after {
-  width: 100%; /* Fills the underline on hover */
+  width: 100%;
 }
 
+/* Hamburger menu button */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 100;
+}
 
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
 
-@media (max-width: 768px) {
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  .header {
+    margin: 0 1rem 2rem 1rem;
+    padding: 1rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
   .navFonts {
     display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100vh;
+    background-color: white;
+    padding: 6rem 2rem 2rem;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 90;
+  }
+
+  .menuOpen {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navFonts a {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+  }
+
+  /* Hamburger animation */
+  .menuOpen + .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .menuOpen + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menuOpen + .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
   }
 }
-
-
