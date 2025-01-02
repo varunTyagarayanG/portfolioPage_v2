@@ -6,60 +6,61 @@ const Blog = () => {
     const blogPosts = [
         {
             _id: '1',
-            title: 'Understanding the CAP Theorem',
-            author: 'Varun Tyagarayan G',
-            publish_date: '2023-12-01',
-            summary: 'An in-depth look at the CAP theorem and its implications for distributed systems.'
+            title: 'ID generation system similar to Instagram\'s snowflake ID generation',
+            publish_date: '2024-12-26'
         },
         {
             _id: '2',
-            title: 'Exploring Distributed Key-Value Stores',
-            author: 'Varun Tyagarayan G',
-            publish_date: '2023-12-15',
-            summary: 'A comprehensive analysis of various distributed key-value store architectures.'
+            title: 'Implementing database sharding for a phonebook app using MySQL',
+            publish_date: '2024-12-21'
         },
         {
             _id: '3',
-            title: 'The Evolution of NoSQL Databases',
-            author: 'Varun Tyagarayan G',
-            publish_date: '2024-01-05',
-            summary: 'Tracing the history and development of NoSQL databases and their impact on modern data storage.'
+            title: 'Flight seat reservation system that supports concurrent seat bookings',
+            publish_date: '2024-12-16'
         },
         {
             _id: '4',
-            title: 'Scaling Databases: Techniques and Challenges',
-            author: 'Varun Tyagarayan G',
-            publish_date: '2024-01-20',
-            summary: 'Exploring various strategies for scaling databases and the challenges they present.'
+            title: 'Cubicles- A job portal Site(M.E.R.N)',
+            publish_date: '2024-12-02'
         },
         {
             _id: '5',
-            title: 'In-Memory Databases: Use Cases and Limitations',
-            author: 'Varun Tyagarayan G',
-            publish_date: '2024-02-05',
-            summary: 'Analyzing the benefits and drawbacks of in-memory databases in modern applications.'
+            title: 'Interstate Traffic Volume Prediction(Random-Forest-Regressor)',
+            publish_date: '2024-11-20'
+        },
+        {
+            _id: '6',
+            title: 'Automatic Number Plate Detection(Deep Learning Algo)',
+            publish_date: '2024-11-18'
+        },
+        {
+            _id: '7',
+            title: 'Feature detection descriptor and Matching(ComputerVision)',
+            publish_date: '2024-10-06'
         }
     ];
 
+    const formatDate = (dateString) => {
+        const date = new Date(dateString);
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        return `${months[date.getMonth()]} ${String(date.getDate()).padStart(2, '0')}, ${date.getFullYear()}`;
+    };
+
     return (
         <div className={styles.blog}>
-            <div className="container">
-                <h1 className={styles.title}>Tyaggs Dhwaja - A Blog</h1>
-                <p className={styles.description}>Weekly essays on research papers and tech insights.</p>
+            <div className={styles.container}>
+                <h1 className={styles.title}>Blog</h1>
                 <div className={styles.posts}>
                     {blogPosts.map((post) => (
-                        <article key={post._id} className={styles.post}>
-                            <h2 className={styles.postTitle}>
-                                <Link to={`/blog/${post._id}`} className={styles.postLink}>{post.title}</Link>
-                            </h2>
-                            <p className={styles.postMeta}>
-                                <span className={styles.postAuthor}>By {post.author}</span>
-                                <span className={styles.postDate}>
-                                    {new Date(post.publish_date).toLocaleDateString()}
-                                </span>
-                            </p>
-                            <p className={styles.postSummary}>{post.summary}</p>
-                        </article>
+                        <div key={post._id} className={styles.postItem}>
+                            <div className={styles.dateContainer}>
+                                {formatDate(post.publish_date)} :
+                            </div>
+                            <Link to={`/blog/${post._id}`} className={styles.postLink}>
+                                {post.title}
+                            </Link>
+                        </div>
                     ))}
                 </div>
             </div>
@@ -68,4 +69,3 @@ const Blog = () => {
 };
 
 export default Blog;
-

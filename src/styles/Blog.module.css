@@ -1,92 +1,45 @@
 .blog {
-    padding: 2rem 0;
-  }
-  
-  .title {
-    font-family: var(--serif-font);
-    font-size: 2.5rem;
-    color: #1a1a1a;
-    margin-bottom: 1rem;
-  }
-  
-  .description {
-    font-size: 1.1rem;
-    color: var(--text-gray);
-    margin-bottom: 2rem;
-  }
-  
-  .posts {
-    display: grid;
-    gap: 2rem;
-  }
-  
-  .post {
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 2rem;
-  }
-  
-  .postTitle {
-    font-family: var(--serif-font);
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .postTitle a {
-    color: #1a1a1a;
-    text-decoration: none;
-  }
-  
-  .postTitle a:hover {
-    color: var(--link-blue);
-  }
-  
-  .postDate {
-    font-size: 0.9rem;
-    color: var(--text-gray);
-    margin-bottom: 1rem;
-  }
-  
-  .postExcerpt {
-    font-size: 1rem;
-    color: var(--text-gray);
-    margin-bottom: 1rem;
-  }
-  
-  .readMore {
-    color: var(--link-blue);
-    text-decoration: none;
-    font-weight: 500;
-  }
-  
-  .readMore:hover {
-    text-decoration: underline;
-  }
-  
-  .error {
-    text-align: center;
     padding: 2rem;
-    margin: 2rem auto;
-    max-width: 600px;
-    background-color: #fff0f0;
-    border-radius: 8px;
-    border: 1px solid #ffcdd2;
-  }
-  
-  .error h2 {
-    color: #d32f2f;
-    margin-bottom: 1rem;
-  }
-  
-  .error p {
-    color: #555;
-    margin-bottom: 0.5rem;
-  }
-  
-  .noPosts {
-    text-align: center;
-    color: #666;
-    font-style: italic;
-    padding: 2rem 0;
-  }
-  
-  
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #ef4444;  /* Changed to red */
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.posts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.postItem {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.dateContainer {
+    font-family: 'Roboto Mono', monospace;  /* Monospace font */
+    color: var(--text-gray);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.postLink {
+    font-family: 'Assistant', sans-serif;  /* Assistant font */
+    color: #3b82f6;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.postLink:hover {
+    text-decoration: underline;
+    color: #2563eb;
+}

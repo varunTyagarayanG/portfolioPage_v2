@@ -7,13 +7,13 @@ const Footer = () => {
       <div className={`${styles.container} container`}>
         <div className={styles.newsletter}>
           <h2 className={styles.newsletterTitle}>
-            <span className={styles.highlight}>Tyaggs Dhwaja - A Blog</span> As I'm currently reading various research papers, I plan to add a blog feature to my site!
+            <span className={styles.highlight}>Dhwaja-A Blog</span> As I'm currently reading various research papers, I plan to add a blog feature to my site!
           </h2>
           <p className={styles.newsletterDesc}>
             Weekly essays on research papers.
           </p>
           <div className={styles.newsletterButtons}>
-            <a href="#" className={styles.buttonLinkedin}>Typically, you'd find an email ID here to contact me, but if you're truly interested in collaborating, you'll figure out a way to reach me.</a>
+            <a href="#" className={styles.buttonLinkedin}>If you really wanna collaborate..contact me someway!</a>
           </div>
         </div>
         <div className={styles.copyright}>
